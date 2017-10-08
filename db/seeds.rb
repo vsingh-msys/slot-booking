@@ -6,7 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-arr = [ ['9:00AM', '9:30AM'],['9:30AM', '10:00AM'],['10:30AM', '11:00AM'],['11:00AM', '11:30AM'],['11:30AM', '12:00PM']]
-arr.each do |slot|
-	TimeSlot.find_or_create_by(start_time: slot.first, end_time: slot.last)
+time_slots_hash = [{start_time: '9:00AM', end_time: '9:30AM'},
+	               {start_time: '9:30AM', end_time:'10:00AM'},
+	               {start_time: '10:30AM', end_time: '11:00AM'},
+	               {start_time: '11:00AM',end_time: '11:30AM'},
+	               {start_time: '11:30AM', end_time: '12:00PM'}]
+time_slots_hash.each do |slot|
+	TimeSlot.find_or_create_by(slot)
 end

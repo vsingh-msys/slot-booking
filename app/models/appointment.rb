@@ -1,7 +1,6 @@
 class Appointment < ApplicationRecord
 	belongs_to :time_slot
-	validates :time_slot, presence: true
-	#validates :book_date, presence: true, future_date_only: true, uniqueness: {scope: :time_slot_id}
+	validates :book_date, presence: true, future_date_only: true, uniqueness: {scope: :time_slot_id}
 	def start_time
         self.book_date
     end

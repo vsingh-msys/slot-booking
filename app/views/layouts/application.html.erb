@@ -9,7 +9,13 @@
   </head>
   <body>
   	<div class="container">
+      <%= render 'shared/header' %>
+      <%= render 'shared/messages' %>
   		<%= yield %>
+      <div class="row"><hr></div>
+      <%= render 'shared/footer' %>
   	</div>
+
+
   </body>
 </html>

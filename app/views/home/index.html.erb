@@ -1,8 +1,4 @@
 <div class="row">
-	<div class="col-md-12"><h1 class="text-center">Slot booking</h1></div>
-</div>
-<div class="row"><hr></div>
-<div class="row">
 	<%= month_calendar  events: @appointments do |date, appointments| %>
 		
   		<span class="date-str"><%= date.day %></span>
@@ -13,12 +9,3 @@
 	   <% end %>
 	<% end %>
 </div>
-
-
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('.simple-calendar table > tbody > tr > td.day.future, .simple-calendar table > tbody > tr > td.day.today').on('click', function(){
-			console.log($(this).data('date'));
-		});
-	});
-</script>
