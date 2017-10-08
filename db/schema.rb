@@ -10,25 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171006101540) do
+ActiveRecord::Schema.define(version: 20171006072159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "appointments", force: :cascade do |t|
-    t.string "name"
-    t.datetime "book_date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "booked_slots", force: :cascade do |t|
+    t.date "book_date"
     t.bigint "time_slot_id"
-    t.bigint "appointment_id"
+    t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["appointment_id"], name: "index_booked_slots_on_appointment_id"
-    t.index ["time_slot_id"], name: "index_booked_slots_on_time_slot_id"
+    t.index ["time_slot_id"], name: "index_appointments_on_time_slot_id"
   end
 
   create_table "time_slots", force: :cascade do |t|
@@ -38,6 +31,5 @@ ActiveRecord::Schema.define(version: 20171006101540) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "booked_slots", "appointments"
-  add_foreign_key "booked_slots", "time_slots"
+  add_foreign_key "appointments", "time_slots"
 end

@@ -21,3 +21,13 @@
 	font-size: x-large;
 	line-height: 66px;
 }
+
+.simple-calendar table > tbody > tr > td.day {
+	position: relative;
+}
+.book-now-btn {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+
+}

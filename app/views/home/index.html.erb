@@ -4,9 +4,8 @@
 <div class="row"><hr></div>
 <div class="row">
 	<%= month_calendar  events: @appointments do |date, appointments| %>
-		<%# next unless current_month_day(date) %>
-  		<%= date.day %>
-
+		
+  		<span class="date-str"><%= date.day %></span>
   		<% appointments.each do |appointment| %>
 		    <div>
 		      <%= appointment.name %>

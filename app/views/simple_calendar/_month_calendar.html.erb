@@ -20,6 +20,10 @@
           <% week.each do |day| %>
             <%= content_tag :td, class: calendar.td_classes_for(day), data: {date: day} do %>
               <% block.call day, sorted_events.fetch(day, []) %>
+              <div class="book-now-btn">
+                <%= link_to "book now", new_appointment_path(book_date: day), class: 'btn btn-sm' if current_month_day(day) && is_available?(sorted_events, day) %>
+              </div>
+              
             <% end %>
           <% end %>
         </tr>

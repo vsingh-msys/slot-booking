@@ -34,10 +34,11 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Gem to handle calender UI and its events
-gem 'simple_calendar', '~> 2.2', '>= 2.2.7'
+gem 'simple_calendar'
 
 # Page Design
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
 
 # Jquery and Js lib
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
@@ -55,6 +56,8 @@ group :development, :test do
   gem 'rubocop', '~> 0.50.0', require: false
   gem 'brakeman', :require => false
   gem 'rails_best_practices', '~> 1.19'
+  gem 'awesome_print', '~> 1.8'
+  gem 'better_errors', '~> 2.3'
 
 end
 
