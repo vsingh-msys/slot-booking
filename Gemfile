@@ -61,6 +61,10 @@ group :development, :test do
 
 end
 
+group :production do
+  gem 'heroku-deflater', '~> 0.6.3'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
