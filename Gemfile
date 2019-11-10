@@ -5,7 +5,6 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
@@ -37,11 +36,11 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_calendar'
 
 # Page Design
-gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
-gem 'simple_form', '~> 3.2', '>= 3.2.1'
+gem 'bootstrap-sass', '~> 3.1'
+gem 'simple_form'
 
 # Jquery and Js lib
-gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+gem 'jquery-rails', '~> 4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
